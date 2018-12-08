@@ -1,0 +1,6 @@
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Nucleo\bin\Debug\Tiendon.Nucleo.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Nucleo\bin\Debug\Tiendon.Nucleo.pdb
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Nucleo\obj\Debug\Tiendon.Nucleo.csprojAssemblyReference.cache
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Nucleo\obj\Debug\Tiendon.Nucleo.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Nucleo\obj\Debug\Tiendon.Nucleo.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Nucleo\obj\Debug\Tiendon.Nucleo.pdb
