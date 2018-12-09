@@ -226,6 +226,7 @@
     <Content Include="Views\Usuario\Registro.cshtml" />
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Producto\Nuevo.cshtml" />
+    <Content Include="Views\Compra\Compra.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
