@@ -96,3 +96,13 @@ C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\obj\Debug\Tiendon.Web.cspr
 C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\obj\Debug\Tiendon.Web.csproj.CopyComplete
 C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\obj\Debug\Tiendon.Web.dll
 C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\obj\Debug\Tiendon.Web.pdb
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\MySql.Data.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\Tiendon.Nucleo.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\Tiendon.Nucleo.pdb
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\EntityFramework.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\Google.Protobuf.dll
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\EntityFramework.xml
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\Google.Protobuf.xml
+C:\Users\Propietario\source\repos\Tiendon\Tiendon.Web\bin\MySql.Data.xml

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tiendon.Nucleo.Entidades
 {
-    class Compra
+    public class Compra
     {
 
         public String Id { get; set; }  
