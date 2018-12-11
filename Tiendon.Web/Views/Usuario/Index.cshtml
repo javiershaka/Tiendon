@@ -6,15 +6,23 @@
 
 
 
-<h1 class="page-header">Portada de usuario en diseño @Model[0].Nombre</h1>
-<li><a href="#"><img src="~/Content/css/images/small6.jpg" /></a></li>
-@*@foreach (Tiendon.Nucleo.Entidades.Usuario us in Model)
-    {
-        <h2> @us.Nombre</h2>
+<div id="content">
+    <h1 class="page-header"> @Model[0].Nombre</h1>
+    <br />
+    <h1 class="page-header"> @Model[0].Edad</h1>
+    <br />
+    <h1 class="page-header"> @Model[0].Sexo</h1>
+    <br />
+    <h1 class="page-header"> @Model[0].Correo</h1>
+    <br />
+    <h1 class="page-header"> @Model[0].Direccion</h1>
+    @*@foreach (Tiendon.Nucleo.Entidades.Usuario us in Model)
+        {
+            <h2> @us.Nombre</h2>
 
-    }*@
+        }*@
 
-
+</div>
 
 
 
