@@ -17,5 +17,6 @@ namespace Tiendon.Nucleo.Entidades
         public String TipoRopa { get; set; }
         public String Marca { get; set; }
         public int stok { get; set; }
+        public String Ubicacion { get; set; }
     }
 }
