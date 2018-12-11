@@ -6,24 +6,24 @@ using MySql.Data.MySqlClient;
 
 namespace Tiendon.Web.Models
 {
-    public class pruebaConexion
+    public class Conexion
     {
         public MySqlConnection conexion = new MySqlConnection();
-    
-        public String Conectarsql()
+
+        public Object Conectarsql()
         {
-            conexion.ConnectionString = "server=localhost ; database=xemletbd; uid=root; pwd=javiershaka;";
+            conexion.ConnectionString = "server=db4free.net; uid=javiershaka; pwd=123456789; database=tiendondb; old guids=true";
             try
             {
                 conexion.Open();
-               
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                
+
             }
 
-            return conexion.ToString();
+            return conexion;
 
         }
         public void cerrarConexion()
@@ -37,13 +37,10 @@ namespace Tiendon.Web.Models
             }
             catch (Exception e)
             {
-                
+
             }
 
         }
-        
 
     }
-
-    
 }

@@ -14,34 +14,9 @@ namespace Tiendon.Web.Controllers
     public class UsuarioController : Controller
 
     {
-        ////
-        //public ActionResult ObtenerTodos()
-        //{
-        //    try
-        //    {
-        //        IList<Usuario> usuarios = new List<Usuario>();
-        //        Usuario u = new Usuario();
+     
+        
 
-        //        u.Nombre = "javis Lopez";
-        //        u.Cuenta = "javiershaka";
-        //        u.Direccion = "Periferico #81";
-        //        u.Id = 16656;
-        //        u.Telefono = "6222277534";
-        //        usuarios.Add(u);
-
-
-
-        //        return Json(new { data = usuarios }, JsonRequestBehavior.AllowGet);
-
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return RedirectToAction("Error", "Home");
-        //    }
-
-        //}
         // GET: Usuario
         public ActionResult Index()
 
@@ -50,22 +25,20 @@ namespace Tiendon.Web.Controllers
             try
             {
                 MySqlConnection conexion = new MySqlConnection();
-
-
-
                 conexion.ConnectionString = "server=db4free.net; uid=javiershaka; pwd=123456789; database=tiendondb; old guids=true";
-
-
-                conexion.Open();
-
-
-                
+                conexion.Open();    
                 MySqlCommand coman = new MySqlCommand(String.Format("SELECT * FROM usuario"), conexion);
                 MySqlDataReader reader = coman.ExecuteReader();
                 while (reader.Read())
                 {
                     Usuario us = new Usuario();
-                    us.Nombre = reader.GetString(1);
+                    us.Id = reader.GetString(0);
+                    us.Correo = reader.GetString(1);
+                    us.Password = reader.GetString(2);
+                    us.Nombre = reader.GetString(3);
+                    us.Edad = reader.GetInt16(4);
+                    us.Sexo = reader.GetString(5);
+                    us.Direccion = reader.GetString(6);
                     lista.Add(us);
                 }
 
@@ -80,6 +53,10 @@ namespace Tiendon.Web.Controllers
         }
       
         public ActionResult Registro()
+        {
+            return View();
+        }
+        public ActionResult Login()
         {
             return View();
         }

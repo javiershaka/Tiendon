@@ -1,5 +1,6 @@
 ﻿
-
+@using MySql.Data.MySqlClient;
+@using Tiendon.Web.Controllers;
 @{
     Layout = "";
 }
@@ -49,82 +50,101 @@
 
 </head>
 <body>
-
-    <div id="header">
-        <h1 id="logo"><a href="#">shoparound</a></h1>
-        <!-- Cart -->
-        <div id="cart">
-            <a href="#" class="cart-link">Your Shopping Cart</a>
-            <div class="cl">&nbsp;</div>
-            <span>Articles: <strong>4</strong></span> &nbsp;&nbsp; <span>Cost: <strong>$250.99</strong></span>
-        </div>
-        <!-- End Cart -->
-        <!-- Navigation -->
-        <div id="navigation">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">The Store</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <!-- End Navigation -->
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-lg-6">
-                <form role="form" method="post">
-                    <div class="form-group">
-                        <label>Nombre de usuario</label>
-                        <input placeholder="javiershaka" class="form-control txtForm">
-
-
-                    </div>
-                    <div class="form-group">
-                        <label>Correo</label>
-
-                        <input placeholder="Example@gmail.com" class="form-control txtForm">
-
-
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" placeholder="******" class="form-control txtForm">
-
-
-                    </div>
-                    <div class="form-group">
-                        <label>Verificar password</label>
-                        <input type="password" placeholder="******" class="form-control txtForm">
-
-
-                    </div>
-                    <div class="form-group">
-                        <label>Edad</label>
-                        <input placeholder="22" class="form-control txtForm">
-
-
-                    </div>
-                    <div class="form-group">
-                        <select name="genero">
-                            <option value="Mujer">Mujer</option>
-                            <option value="Hombre">Hombre</option>
-
-                        </select>
-
-                    </div>
-                    <div class="form-group">
-                        <label>Direccion</label>
-                        <input placeholder="calle 20 avenidad 18" class="form-control txtForm">
-
-
-                    </div>
-                    <input type="submit" class="btn btn-success" />
-                </form>
+    <div class="shell">
+        <div id="header">
+            <div id="navigation">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                </ul>
             </div>
+            <!-- Cart -->
+
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <form role="form" method="post">
+                        <div class="form-group">
+                            <label>Nombre de usuario</label>
+                            <input name="nombre" placeholder="javiershaka" class="form-control txtForm">
+
+
+                        </div>
+                        <div class="form-group">
+                            <label>Correo</label>
+
+                            <input name="correo" placeholder="Example@gmail.com" class="form-control txtForm">
+
+
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input name="password" type="password" placeholder="******" class="form-control txtForm">
+
+
+                        </div>
+                        <div class="form-group">
+                            <label>Verificar password</label>
+                            <input  type="password" placeholder="******" class="form-control txtForm">
+
+
+                        </div>
+                        <div class="form-group">
+                            <label>Edad</label>
+                            <input name="edad" placeholder="22" class="form-control txtForm">
+
+
+                        </div>
+                        <div class="form-group">
+                            <select name="genero">
+                                <option value="Mujer">Mujer</option>
+                                <option value="Hombre">Hombre</option>
+
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <input name="direccion" placeholder="calle 20 avenidad 18" class="form-control txtForm">
+
+
+                        </div>
+                        <a class="btn btn-success"  type="submit"  name="btn"  href="@Url.Action("Login", "Usuario")" >Registrar</a>
+                        @{
+                            
+                            String correo = Request.Form["correo"];
+                            String password = Request.Form["password"];
+                            String nombre = Request.Form["nombre"];
+                            String edad = Request.Form["edad"];
+                            String sexo = Request.Form["sexo"];
+                            String direccion = Request.Form["sexo"];
+
+                            MySqlConnection conexion = new MySqlConnection();
+                            conexion.ConnectionString = "server=db4free.net; uid=javiershaka; pwd=123456789; database=tiendondb; old guids=true";
+                            conexion.Open();
+                            MySqlCommand coman = new MySqlCommand(String.Format("INSERT INTO `usuario` (`id`, `correo`, `password`, `nombre`, `edad`, `sexo`, `direccion`) VALUES (NULL, '1', '1', '1', '1', '1', '" + direccion + "');"), conexion);
+                            MySqlDataReader reader = coman.ExecuteReader();
+
+
+                            conexion.Close();
+
+
+
+
+
+
+                        }
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
+    
+    <!-- Cart -->
+
+
 
 </body>
 </html>
